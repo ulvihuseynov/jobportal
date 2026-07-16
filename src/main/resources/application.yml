@@ -1,1 +1,9 @@
-spring.application.name=JobPortal
+spring:
+  application:
+    name: JobPortal
+  profiles:
+    default: local
+
+
+server:
+  port: 8080

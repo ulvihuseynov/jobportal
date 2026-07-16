@@ -1,1 +1,5 @@
-spring.application.name=JobPortal
+spring:
+  application:
+    name: JobPortal
+
+
