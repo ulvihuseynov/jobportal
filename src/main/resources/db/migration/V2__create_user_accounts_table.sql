@@ -9,7 +9,7 @@ password_hash varchar(255) NOT NULL,
 role varchar(50) NOT NULL,
 status varchar(50) NOT NULL,
 
-email_Verified boolean NOT NULL DEFAULT FALSE,
+email_verified boolean NOT NULL DEFAULT FALSE,
 last_login_at TIMESTAMP WITH TIME ZONE,
 
 created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -23,4 +23,4 @@ CONSTRAINT pk_user_accounts
     CONSTRAINT uk_user_accounts_email
         UNIQUE(email)
 
-)
+);

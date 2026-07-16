@@ -13,7 +13,6 @@ import java.time.Instant;
 
 @Entity
 @Table(name = "user_accounts")
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -22,7 +21,7 @@ public class UserAccount extends BaseEntity {
     @Column(unique = true, nullable = false)
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false,name = "password_hash")
     private String passwordHash;
 
 
@@ -34,9 +33,15 @@ public class UserAccount extends BaseEntity {
     @Column(nullable = false)
     private UserStatus status;
 
+    @Column(name = "email_verified")
     private boolean emailVerified;
 
 
-    @Nullable
+    @Column(name = "last_login_at")
     private Instant lastLoginAt;
+
+    public void setEmail(String email){
+
+        this.email =email == null ? null : email.toLowerCase();
+    }
 }

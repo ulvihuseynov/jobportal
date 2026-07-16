@@ -1,27 +1,30 @@
 package com.jobportal.common.domain;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.LastModifiedBy;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.Instant;
 
+@Getter
+@Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @CreatedBy
     private Long id;
 
-    @CreatedBy
+    @CreatedDate
     private Instant createdAt;
 
-    @LastModifiedBy
+    @LastModifiedDate
     private Instant updatedAt;
 
-    @CreatedBy
+    @Version
     private Long version;
 }
