@@ -3,7 +3,7 @@
     <envs>
       <env name="DB_HOST" value="localhost" />
       <env name="DB_NAME" value="job_portal" />
-      <env name="DB_PASSWORD" value="KUh53-?&amp;ma1" />
+      <env name="DB_PASSWORD" value="HlM12(}^ty65" />
       <env name="DB_PORT" value="5432" />
       <env name="DB_USERNAME" value="postgres" />
     </envs>
